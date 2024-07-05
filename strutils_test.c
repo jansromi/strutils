@@ -11,6 +11,13 @@ void test(char s[], const char *expected) {
   printf("Actual: \"%s\"\n", s);
 }
 
+void test_to_lower() {
+  char s1[] = "AAA";
+  const char *expect1 = "aaa";
+  to_lower(s1);
+  test(s1, expect1);
+}
+
 void test_trim_whitespace() {
   char s1[] = "   foo";
   const char *expect1 = "foo";
@@ -64,5 +71,6 @@ void test_reverse() {
 int main(int argc, char *argv[]) {
   test_trim_whitespace();
   test_reverse();
+  test_to_lower();
   return EXIT_SUCCESS;
 }

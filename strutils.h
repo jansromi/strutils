@@ -3,5 +3,6 @@
 
 void trim_whitespace(char str[], bool tail);
 void reverse(char str[]);
+void to_lower(char str[]);
 
 #endif // !STRUTILS_H_

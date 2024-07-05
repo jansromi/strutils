@@ -55,10 +55,16 @@ void reverse(char str[]) {
 }
 
 /*
- * TODO
+ * Modifies passed string by lowercasing it.
  */
 void to_lower(char str[]) {
-
+  if (strlen(str) < 1) return;
+  for (int i=0;i<strlen(str);i++) {
+    int temp = (int)(str[i]);
+    if (temp >= 65 && temp <= 90) {
+      str[i] = (char)(temp + 32);
+    }
+  }
 }
 
 /*
