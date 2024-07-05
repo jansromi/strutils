@@ -60,9 +60,9 @@ void reverse(char str[]) {
 void to_lower(char str[]) {
   if (strlen(str) < 1) return;
   for (int i=0;i<strlen(str);i++) {
-    int temp = (int)(str[i]);
-    if (temp >= 65 && temp <= 90) {
-      str[i] = (char)(temp + 32);
+    int ch = (int)(str[i]);
+    if (ch >= 65 && ch <= 90) {
+      str[i] = (char)(ch + 32);
     }
   }
 }
@@ -70,6 +70,6 @@ void to_lower(char str[]) {
 /*
  * TODO
  */
-void to_upper() {
+void to_upper(char str[]) {
 
 }
