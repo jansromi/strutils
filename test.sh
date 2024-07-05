@@ -1,5 +1,5 @@
 # /bin/bash
 
-gcc strutils_test.c strutils.c -o tests_out;
+gcc -o strutils_test strutils_test.c -lstrutils -L/usr/local/lib
 
-./tests_out;
+./strutils_test;
