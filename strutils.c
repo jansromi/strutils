@@ -68,8 +68,14 @@ void to_lower(char str[]) {
 }
 
 /*
- * TODO
+ * Modifies passed string by uppercasing it.
  */
 void to_upper(char str[]) {
-
+  if (strlen(str) < 1) return;
+  for (int i=0;i<strlen(str);i++) {
+    int ch = (int)(str[i]);
+    if (ch >= 97 && ch <= 122) {
+      str[i] = (char)(ch - 32);
+    }
+  }
 }

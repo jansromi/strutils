@@ -18,6 +18,14 @@ void test_to_lower() {
   test(s1, expect1);
 }
 
+void test_to_upper() {
+  char s1[] = "aaa";
+  const char *expect1 = "AAA";
+  to_upper(s1);
+  test(s1, expect1);
+}
+
+
 void test_trim_whitespace() {
   char s1[] = "   foo";
   const char *expect1 = "foo";
@@ -72,5 +80,6 @@ int main(int argc, char *argv[]) {
   test_trim_whitespace();
   test_reverse();
   test_to_lower();
+  test_to_upper();
   return EXIT_SUCCESS;
 }
