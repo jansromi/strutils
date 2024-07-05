@@ -16,7 +16,7 @@ void trim_whitespace_lead(char str[]) {
     str[j] = '\0';
 }
 
-void trim_whitespace_tail(char str[], int len) {
+void trim_whitespace_tail(char str[]) {
     if (strlen(str) < 1) return;
     int i = strlen(str) - 1;
     while (i >= 0 && (isspace((unsigned char)str[i]) || str[i] == '\0')) {
@@ -41,9 +41,9 @@ void trim_whitespace(char str[], bool tail) {
  * Modifies passed string by reversing it.
  */
 void reverse(char str[]) {
-  if (strlen(str < 2)) return;
+  if (strlen(str) < 2) return;
   int i = 0;
-  int j = len - 1;
+  int j = strlen(str) - 1;
 
   while (i < j) {
     char temp = str[i];
@@ -54,10 +54,16 @@ void reverse(char str[]) {
   }
 }
 
+/*
+ * TODO
+ */
 void to_lower(char str[]) {
 
 }
 
+/*
+ * TODO
+ */
 void to_upper() {
 
 }
