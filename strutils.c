@@ -79,3 +79,21 @@ void to_upper(char str[]) {
     }
   }
 }
+
+void replace(char str[], char find, char replace) {
+  char *current_pos = strchr(str,find);
+  while (current_pos) {
+    *current_pos = replace;
+    current_pos = strchr(current_pos, find);
+  }
+}
+
+void remove_char(char str[], char c)
+{
+  int j, n = strlen(str);
+  for (int i = j = 0; i < n; i++)
+      if (str[i] != c) {
+        str[j++] = str[i];
+    }
+    str[j] = '\0';
+}

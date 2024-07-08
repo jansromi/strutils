@@ -76,10 +76,31 @@ void test_reverse() {
 
 }
 
+void test_replace() {
+  char s1[] = "AAAA";
+  const char *expect1 = "BBBB";
+  replace(s1, 'A', 'B');
+  test(s1, expect1);
+}
+
+void test_remove() {
+  char s1[] = "BAAAA";
+  const char *expect1 = "AAAA";
+  remove_char(s1, 'B');
+  test(s1, expect1);
+  
+  char s2[] = "@";
+  const char *expect2 = "";
+  remove_char(s2, '@');
+  test(s2, expect2);
+}
+
 int main(int argc, char *argv[]) {
   test_trim_whitespace();
   test_reverse();
   test_to_lower();
   test_to_upper();
+  test_replace();
+  test_remove();
   return EXIT_SUCCESS;
 }
